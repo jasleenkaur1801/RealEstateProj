@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.listings-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.property-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.property-card h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.property-images {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+}
+
+.property-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.property-details {
+    margin-bottom: 15px;
+}
+
+.property-details p {
+    margin: 5px 0;
+}
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.amenity-tag {
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    .listings-container {
+        grid-template-columns: 1fr;
+    }
+}

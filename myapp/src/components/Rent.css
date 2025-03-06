@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+}
+
+.number-selector {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.number-selector button {
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.number-selector button:hover{
+    background-color: #e8f4fd;
+}
+.number-selector button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+.number-selector button.selected {
+    background-color: var(--primary-color);
+    color: white;
+}
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 30px auto 0;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.form-group + .form-group {
+    margin-top: 20px;
+}
+.image-upload {
+    margin-bottom: 20px;
+}
+
+.image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.amenities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.amenity-item {
+    display: flex;
+    align-items: center;
+}
+
+.amenity-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}
